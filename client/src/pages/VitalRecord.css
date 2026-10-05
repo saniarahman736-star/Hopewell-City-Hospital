@@ -1,0 +1,212 @@
+.doctor-record-vital-page {
+    min-height: 100vh;
+    padding: 40px;
+    background: #f4f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.record-vital-card {
+    width: 100%;
+    max-width: 1050px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+
+.record-vital-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5eaf0;
+    margin-bottom: 30px;
+}
+
+.record-vital-header span {
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    background: #fff1f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.record-vital-header h1 {
+    margin: 0;
+    color: #172033;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.record-vital-header p {
+    margin: 6px 0 0;
+    color: #7a8494;
+    font-size: 14px;
+}
+
+/* Patient Selection */
+
+.patient-select-section {
+    margin-bottom: 30px;
+}
+
+.patient-select-section label,
+.vital-form-grid label {
+    display: block;
+    margin-bottom: 9px;
+    color: #344054;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.patient-select-section select {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border: 1px solid #d8dee8;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #273142;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.patient-select-section select:focus {
+    border-color: #5267df;
+    box-shadow: 0 0 0 3px rgba(82, 103, 223, 0.1);
+}
+
+/* Vital Form */
+
+.vital-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.vital-form-grid > div {
+    background: #f8fafc;
+    border: 1px solid #e7ebf1;
+    border-radius: 14px;
+    padding: 18px;
+}
+
+.input-with-unit {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #d8dee8;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.input-with-unit input {
+    flex: 1;
+    min-width: 0;
+    height: 46px;
+    padding: 0 13px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #172033;
+    background: transparent;
+}
+
+.input-with-unit input::placeholder {
+    color: #a5adba;
+}
+
+.input-with-unit:focus-within {
+    border-color: #5267df;
+    box-shadow: 0 0 0 3px rgba(82, 103, 223, 0.08);
+}
+
+.input-with-unit span {
+    min-width: 62px;
+    padding: 0 12px;
+    color: #667085;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Save Button */
+
+.save-vital-button {
+    width: 100%;
+    margin-top: 32px;
+    height: 52px;
+    border: none;
+    border-radius: 11px;
+    background: #5267df;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.save-vital-button:hover {
+    background: #4357ca;
+    transform: translateY(-1px);
+}
+
+.save-vital-button:disabled {
+    background: #aab3d8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .doctor-record-vital-page {
+        padding: 20px;
+    }
+
+    .record-vital-card {
+        padding: 25px 20px;
+    }
+
+    .record-vital-header h1 {
+        font-size: 22px;
+    }
+
+    .vital-form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .doctor-record-vital-page {
+        padding: 12px;
+    }
+
+    .record-vital-card {
+        padding: 20px 15px;
+        border-radius: 14px;
+    }
+
+    .record-vital-header {
+        gap: 12px;
+    }
+
+    .record-vital-header span {
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+    }
+
+    .record-vital-header h1 {
+        font-size: 19px;
+    }
+}

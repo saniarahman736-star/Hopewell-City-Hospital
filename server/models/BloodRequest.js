@@ -1,0 +1,37 @@
+const mongoose=require("mongoose");
+const bloodRequestSchema=new mongoose.Schema(
+    {
+        patientId:{
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"User",
+            required:true,
+        },
+        bloodGroup:{
+            type:String,
+            required:true,
+            enum:["A+","A-","B+","B-","AB+","AB-","O+","O-"]
+        },
+        unitsRequired:{
+            type:Number,
+            required:true,
+            min:1
+        },
+        requiredDate:{
+            type:Date,
+            required:true
+        },
+        reason:{
+            type:String,
+            required:true
+        },
+        status:{
+            type:String,
+            enum:["Pending","Approved","Rejected","Completed"],
+            default:"Pending"
+        }
+    },
+    {
+        timestamps:true
+    }
+);
+module.exports=mongoose.model("BloodRequest",bloodRequestSchema);

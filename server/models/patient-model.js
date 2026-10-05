@@ -1,0 +1,39 @@
+const {Schema,model}=require("mongoose");
+const patientSchema=new Schema ({
+    userId:{
+        type:Schema.Types.ObjectId,
+        ref:"User",
+        required:true,
+    },
+    age:{
+        type:Number,
+        required:true,
+    },
+    gender:{
+        type:String,
+        enum:["Male","Female","Other"],
+        required:true,
+    },
+    bloodGroup:{
+        type:String,
+        required:true,
+    },
+    address:{
+        type:String,
+        required:true,
+    },
+    emergencyContact:{
+        type:String,
+        required:true,
+    },
+    allergies:{
+        type:[String],
+        default:[],
+    },
+    medicalHistory:{
+        type:[String],
+        default:[],
+    }
+});
+const Patient=model("Patient",patientSchema);
+module.exports=Patient;

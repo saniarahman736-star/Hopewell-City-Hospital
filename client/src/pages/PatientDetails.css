@@ -1,0 +1,220 @@
+/* ================================
+   PATIENT DETAILS PAGE
+================================ */
+
+.patient-details-page {
+    min-height: 100vh;
+    background: #f5f7fb;
+    padding: 40px 60px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ================================
+   BACK BUTTON
+================================ */
+
+.patient-details-page > button {
+    border: none;
+    background: #ffffff;
+    color: #2563eb;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: 0.2s ease;
+}
+
+.patient-details-page > button:hover {
+    background: #2563eb;
+    color: white;
+    transform: translateX(-2px);
+}
+
+
+/* ================================
+   MAIN CARD
+================================ */
+
+.patient-details-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    border: 1px solid #e8ecf3;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.patient-details-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 30px;
+}
+
+.patient-details-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #e8f0ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.patient-details-header h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    color: #172033;
+    font-weight: 700;
+}
+
+.patient-details-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* ================================
+   DETAILS GRID
+================================ */
+
+.patient-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+
+/* ================================
+   INDIVIDUAL DETAILS
+================================ */
+
+.patient-details-grid > div {
+    background: #f8fafc;
+    border: 1px solid #e8edf4;
+    border-radius: 10px;
+    padding: 18px 20px;
+    min-height: 70px;
+    box-sizing: border-box;
+}
+
+.patient-details-grid label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.patient-details-grid p {
+    margin: 0;
+    color: #172033;
+    font-size: 15px;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+
+/* ================================
+   FULL WIDTH SECTIONS
+================================ */
+
+.patient-details-grid .full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* ================================
+   LOADING / NOT FOUND
+================================ */
+
+.dashboard-loading {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f7fb;
+    color: #374151;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+    .patient-details-page {
+        padding: 25px 20px;
+    }
+
+    .patient-details-card {
+        padding: 25px 20px;
+    }
+
+    .patient-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .patient-details-grid .full-width {
+        grid-column: auto;
+    }
+
+    .patient-details-header h1 {
+        font-size: 23px;
+    }
+
+    .patient-details-avatar {
+        width: 60px;
+        height: 60px;
+        font-size: 27px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .patient-details-page {
+        padding: 20px 12px;
+    }
+
+    .patient-details-card {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    .patient-details-header {
+        gap: 14px;
+    }
+
+    .patient-details-header h1 {
+        font-size: 20px;
+    }
+
+    .patient-details-grid {
+        gap: 15px;
+    }
+
+    .patient-details-grid > div {
+        padding: 15px;
+    }
+}
